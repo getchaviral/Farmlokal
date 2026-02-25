@@ -34,3 +34,37 @@ Distributed locking
 API response caching
 
 Webhook idempotency handling
+
+🔐 Authentication — OAuth2 Client Credentials
+
+Implemented OAuth2 Client Credentials flow with performance optimizations:
+
+Access tokens cached in Redis with TTL
+
+Redis-based distributed locking prevents concurrent token fetches
+
+Automatic token refresh before expiry
+
+Reduced external auth provider calls
+
+🔌 External API Integrations
+API A (Synchronous Integration)
+
+Request timeout handling
+
+Retry mechanism with exponential backoff
+
+Graceful degradation on transient failures
+
+Built for resilience
+
+API B (Webhook-Based Integration)
+
+Webhook callback endpoint implemented
+
+Redis-based idempotency handling
+
+Duplicate event protection
+
+Safe retry support
+
